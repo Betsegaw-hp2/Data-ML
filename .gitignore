@@ -1,4 +1,9 @@
 .env
 *.csv
 venv/
-__pycache__/
+__pycache__/logs/
+Job_pipeline/data/raw/*.csv
+Job_pipeline/data/raw/*.json
+Job_pipeline/data/raw/*.zip
+Job_pipeline/data/processed/*.csv
+Job_pipeline/data/processed/*.json

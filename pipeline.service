@@ -1,0 +1,16 @@
+[Unit]
+Description=Data-ML Job Preprocessing Pipeline
+After=network.target
+
+[Service]
+Type=oneshot
+User=exedev
+WorkingDirectory=/home/exedev/Data-ML
+ExecStart=/home/exedev/Data-ML/run_pipeline.sh
+StandardOutput=append:/home/exedev/Data-ML/logs/pipeline.log
+StandardError=append:/home/exedev/Data-ML/logs/pipeline.log
+TimeoutStartSec=7200
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
